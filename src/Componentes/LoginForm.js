@@ -77,6 +77,13 @@ class LoginForm extends React.Component {
     e.preventDefault();
     
   }
+  VistaTipodeCambio=(e)=>{
+    
+    browserHistory.push('/vista/tipo-de-cambio');
+    // console.log("Vista nueva");
+    e.preventDefault();
+    
+  }
   NuevoLogin=(e)=>{
     
     browserHistory.push('/vista/loginNyA');
@@ -123,7 +130,9 @@ class LoginForm extends React.Component {
     <div className="nav-wrapper azul">
       <ul id="nav-mobile" className="right hide-on-med-and-down">
        {/*  <li><a onClick={this.VistaNueva} >VistaNueva</a></li> */}
+       <li><a onClick={this.VistaTipodeCambio} >  <i className="small material-icons right">check_box</i>Tipo de Cambio</a></li>
         <li><a onClick={this.VistaNueva2} >  <i className="small material-icons right">check_box</i>Asignar Programa</a></li>
+        
         {/*<li><a onClick={this.VistaTablaCreada} ><i className="small material-icons right">pageview</i>Ver tabla</a></li>*/}
       </ul>
     </div>
