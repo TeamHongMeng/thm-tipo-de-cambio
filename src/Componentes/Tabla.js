@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2'
 import ReactTable from "react-table";
+import {browserHistory} from 'react-router-3';
 //import './App2.css';
 
 class Tabla extends Component {
@@ -66,6 +67,14 @@ class Tabla extends Component {
         console.log(event.target.type);
     
       }
+
+       
+      Regresar=(e)=>{
+    
+        browserHistory.push('/');
+        e.preventDefault();
+        
+    }
     
 
 
@@ -165,9 +174,12 @@ class Tabla extends Component {
             },
         ]
 
+
         return (
-          <div>
-            <h3>Mantenimiento Tipo de Cambio</h3>
+         <div className="">
+          <h3>Mantenimiento del Tipo de Cambio <ul id="nav-mobile" class="right  hide-on-med-and-down">
+              <li ><a className="seleccionar" onClick={this.Regresar} >Regresar<i className="material-icons right">reply</i></a></li>
+          </ul></h3>
             
             <div className="vistaTabla">
               
